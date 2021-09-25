@@ -8,24 +8,6 @@ namespace CheckForPrimeNum
 {
    class CheckForPrime
     {
-        public int reverseNum(int target)
-        {
-            int remainder;
-            int reversed = 0;
-
-            while(target != 0)
-            {
-                remainder = target % 10;
-                reversed = reversed * 10 + remainder;
-                target /= 10; //Breaking out of while loop
-            }
-            int i = 1;
-            int[] reverseArr = new int[1];
-            reverseArr[i] = reversed;
-            i++;
-            return reversed;
-        }
-
         public void CheckIfPrime(int target)
         {
             int flag = 0;
@@ -50,6 +32,23 @@ namespace CheckForPrimeNum
                 
                 Console.WriteLine();
             }
+        }
+        public int reverseNum(int target)
+        {
+            int remainder;
+            int reversed = 0;
+
+            while (target != 0)
+            {
+                remainder = target % 10;
+                reversed = reversed * 10 + remainder;
+                target /= 10; //Breaking out of while loop
+            }
+            int i = 1;
+            int[] reverseArr = new int[1];
+            reverseArr[i] = reversed;
+            i++;
+            return reversed;
         }
 
     }
